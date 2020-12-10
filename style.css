@@ -1,6 +1,16 @@
 body {
   background-color: rgb(243, 243, 200);
 }
-#image {
-  width: 1em;
+#main {
+  margin: auto;
+  text-align: justify;
+  max-width: 1024px;
+}
+hr {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: auto;
+  max-width: 20vw;
 }
