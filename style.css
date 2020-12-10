@@ -10,7 +10,15 @@ hr {
   width: 100%;
 }
 img {
+  border: 1px solid black;
+  border-radius: 10px;
   width: 100%;
   height: auto;
   max-width: 20vw;
+  min-width: 110px;
+}
+.myPhoto {
+  font-size: small;
+  text-align: center;
+  float: left;
 }
