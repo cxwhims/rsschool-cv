@@ -5,6 +5,7 @@ body {
   margin: auto;
   text-align: justify;
   max-width: 1024px;
+  min-width: 600px;
 }
 hr {
   width: 100%;
@@ -21,4 +22,26 @@ img {
   font-size: small;
   text-align: center;
   float: left;
+}
+.list {
+  max-width: 700px;
+}
+@media screen and (max-width: 500px) {
+  .myPhoto {
+    font-size: small;
+    text-align: left;
+    float: none;
+  }
+  body {
+    background-color: rgb(38, 42, 61);
+    color: rgb(255, 255, 255);
+  }
+  img {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 20vw;
+    min-width: 110px;
+  }
 }
