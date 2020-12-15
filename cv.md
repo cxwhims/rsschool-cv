@@ -1,4 +1,4 @@
-### **UpSkill** course student's resume/
+### **UpSkill** course student's resume
 ***
 1.	**Name:** Pavel Romankov
 2.	**Contact Info:** [email](cxwhims@gmail.com)
