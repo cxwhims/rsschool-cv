@@ -1,61 +1,54 @@
 body {
-    background-color: rgb(243, 243, 200);
-  }
-  #main {
-    margin: auto;
-    max-width: 1024px;
-  }
-  #img-div {
-  margin: 0;
+  background-color: #ffefbd;
+}
+#main {
+  margin: auto;
+  max-width: 1024px;
+}
+ol {
+  margin: 0 40px;
   padding: 0;
+  list-style: none;
+  text-align: justify;
+}
+img {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: auto;
+  max-width: 220px;
+}
+.photo-name-info {
+  display: flex;
+}
+.my-photo {
+  font-size: small;
+  text-align: center;
+}
+#title {
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .photo-name-info {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  #img-caption{
-  text-align: left;
-  }
-  hr {
-    width: 100%;
-  }
-  ol {
-    margin: 10px;
-    padding: 0;
-    list-style: none;
-    text-align: justify;
+  body {
+    background-color: #142040;
+    color: rgb(255, 255, 255);
   }
   img {
     border: 1px solid black;
     border-radius: 10px;
-    width: 100%;
+    width: 157px;
     height: auto;
-    max-width: 20vw;
-    min-width: 110px;
-  }
-  .photoNameInfo{
-    display: inline-flex;
-    margin: 10px;
-  }
-  .myPhoto {
-    font-size: small;
-    text-align: center;
-    margin: 20px 30px 0 0;
   }
   .list {
-    max-width: 700px;
+    margin: auto 10px;
   }
-  @media screen and (max-width: 500px) {
-    .photoNameInfo{
-      flex-wrap: wrap;
-    }
-    body {
-      background-color: rgb(38, 42, 61);
-      color: rgb(255, 255, 255);
-    }
-    img {
-      border: 1px solid black;
-      border-radius: 10px;
-      width: 100%;
-      height: auto;
-      max-width: 20vw;
-      min-width: 110px;
-      margin-right: 30px;
-    }
+  .contact-info {
+    text-align: center;
   }
+  a {
+    color: #78bcc3;
+  }
+}
