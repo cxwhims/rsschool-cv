@@ -6,6 +6,10 @@ body {
     font-family: 'lato', Arial, sans-serif;
 }
 
+main {
+    margin: auto;
+}
+
 .wrapper {
     max-width: 1020px;
 }
