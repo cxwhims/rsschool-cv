@@ -1,0 +1,63 @@
+html {
+
+}
+
+body {
+    font-family: 'lato', Arial, sans-serif;
+}
+
+.wrapper {
+    max-width: 1020px;
+}
+
+.services__icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #666D89;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-services_pencil {
+    background-image: url(/singolo/img/services/services-item-1--nocircle.svg);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.icon-services_bulb {
+    background-image: url(/singolo/img/services/services-item-2--nocircle.svg);
+    width: 22px;
+    height: 32px;
+    display: inline-block;
+}
+
+.icon-services_heart {
+    background-image: url(/singolo/img/services/services-item-3--nocircle.svg);
+    width: 32px;
+    height: 28px;
+    display: inline-block;
+}
+
+.icon-services_mobile {
+    background-image: url(/singolo/img/services/services-item-4--nocircle.svg);
+    width: 22px;
+    height: 32px;
+    display: inline-block;
+}
+
+.icon-services_think {
+    background-image: url(/singolo/img/services/services-item-5--nocircle.svg);
+    width: 32px;
+    height: 28px;
+    display: inline-block;
+}
+
+.icon-services_star {
+    background-image: url(/singolo/img/services/services-item-6--nocircle.svg);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
