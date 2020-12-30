@@ -9,84 +9,118 @@
     <link rel="stylesheet" href="singolo.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header-block">
         <div class="wrapper">
-            <div class="htader__logo">singolo <p class="header__logoX">*</p></div>
-            <nav class="header__navigation">
-                <ul class="navigation">
-                    <li>home</li>
-                    <li>services</li>
-                    <li>portfolio</li>
-                    <li>about</li>
-                    <li>contact</li>
-                </ul>
-            </nav>
+            <div class="header">
+            
+                <div class="header__logo-container">
+                    <h1 class="header__logo">singolo <p class="header__logoX">*</p></h1>
+                </div>
+                
+                <nav class="navigation">
+                    <ul class="header-navigation">
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">home</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">services</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">portfolio</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">about</a></li>
+                        <li class="header-navigation__item_last"><a class="header-navigation__link" href="#">contact</a></li>
+                    </ul>
+                </nav>
+    
+            </div>
         </div>
+        
     </header>
 
     <main>
-        <section class="home">
-            <dvi class="wrapper">
-    
-            </dvi>
+        <section class="slider__wrapper">
+            
+            <div class="wrapper">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img1.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img2.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+
         </section>
     
-        <section class="services">
-            <div class="wrapper">
+        <section class="services__wrapper">
+            <div class="services">
                 <div class="services-head">
                     <h2>Our Services</h2>
                     <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
 
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_pencil"></span> 
+                <div class="services__column-container">
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_pencil"></span> 
+                        </div>
+                        <h3>Custom Design</h3>
+                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     </div>
-                    <h3>Custom Design</h3>
-                    <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                </div>
-
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_bulb"></span> 
+    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_bulb"></span> 
+                        </div>
+                        <h3>Inovative Ideas</h3>
+                        <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
-                    <h3>Inovative Ideas</h3>
-                    <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                </div>
-
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_heart"></span> 
+    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_heart"></span> 
+                        </div>
+                        <h3>Love Is The Answer</h3>
+                        <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     </div>
-                    <h3>Love Is The Answer</h3>
-                    <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                </div>
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_mobile"></span> 
+                    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_mobile"></span> 
+                        </div>
+                        <h3>Responsive Layout</h3>
+                        <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                     </div>
-                    <h3>Responsive Layout</h3>
-                    <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
-                </div>
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_think"></span> 
+                    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_think"></span> 
+                        </div>
+                        <h3>24 / 7 Support</h3>
+                        <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
                     </div>
-                    <h3>24 / 7 Support</h3>
-                    <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
-                </div>
-                <div class="services-column">
-                    <div class="services__icon">
-                        <span class="icon-services_star"></span> 
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_star"></span> 
+                        </div>
+                        <h3>Feel Like A Star</h3>
+                        <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                     </div>
-                    <h3>Feel Like A Star</h3>
-                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                 </div>
             </div>
         </section>
     
-        <section class="portfolio">
-            <dvi class="wrapper">
+        
+        <div class="portwrapper">
+            <section class="portfolio">
                 <div class="portfolio-head">
                     <h2>Portfolio</h2>
                     <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -140,9 +174,9 @@
 
                     </ul>
                 </div>
-    
-            </dvi>
-        </section>
+            </section>
+        </div>
+        
     
 <!--        <section class="about">
             <dvi class="wrapper">
@@ -157,8 +191,8 @@
         </section>
     -->
     </main>
-    <footer class="footer">
-        <div class="wrapper">
+    <footer class="wrapper">
+        <div class="footer">
             <div class="copyright">© Copyright 2013 </div>
             <div class="social-networks">
                 <ul class="social-networks-tegs">
