@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <header class="header-block">
+        <div class="wrapper">
+            <div class="header">
+            
+                <div class="header__logo-container">
+                    <h1 class="header__logo">singolo <p class="header__logoX">*</p></h1>
+                </div>
+                
+                <nav class="navigation">
+                    <ul class="header-navigation">
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">home</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">services</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">portfolio</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">about</a></li>
+                        <li class="header-navigation__item_last"><a class="header-navigation__link" href="#">contact</a></li>
+                    </ul>
+                </nav>
+    
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <section class="slider__wrapper">
+            <div class="wrapper">
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                      <img src="img/slider/Slider1.png">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="img/slider/Slider2.png">
+                    </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                  </div>
+            </div>
+        </section>
+    
+        <section class="services">
+            <div class="services-portfolio-wrapper">
+                <div class="services-head">
+                    <h2>Our Services</h2>
+                    <p class="services-head__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                </div>
+
+                <div class="services-column__container">
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_pencil"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>Custom Design</h3>
+                            <p class="services-column__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                        </div>
+                    </div>
+    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_bulb"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>Inovative Ideas</h3>
+                            <p  class="services-column__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>                            
+                        </div>
+                    </div>
+    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_heart"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>Love Is The Answer</h3>
+                            <p  class="services-column__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_mobile"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>Responsive Layout</h3>
+                            <p  class="services-column__text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_think"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>24 / 7 Support</h3>
+                            <p  class="services-column__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
+                        </div>
+                    </div>
+
+                    <div class="services-column">
+                        <div class="services__icon">
+                            <span class="icon-services_star"></span> 
+                        </div>
+                        <div class="services-column__column-text">
+                            <h3>Feel Like A Star</h3>
+                            <p  class="services-column__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        
+        <div class="portfolio">
+            <section class="services-portfolio-wrapper">
+                <div class="portfolio-head">
+                    <h2>Portfolio</h2>
+                    <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                </div>
+                <div>
+                    <ul class="portfolio-menu">
+                        <li class="portfolio-menu__item">All</li>
+                        <li class="portfolio-menu__item">Web Design</li>
+                        <li class="portfolio-menu__item">Graphic Design</li>
+                        <li class="portfolio-menu__item">Artwork</li>
+                    </ul>
+                </div>
+                <div >
+                    <ul class="portfolio-table">
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-1.jpg" alt="1">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-2.jpg" alt="2">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-3.jpg" alt="3">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-4.jpg" alt="4">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-5.jpg" alt="5">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-6.jpg" alt="6">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-7.jpg" alt="7">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-8.jpg" alt="8">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-9.jpg" alt="9">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-10.jpg" alt="10">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-11.jpg" alt="11">
+                        </li>
+                        <li class="portfolio-table__item">
+                            <img src="img/portfolio/portfolio-12.jpg" alt="12">
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+    
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <section class="footer-conteiner">
+                <div class="copyright">© Copyright 2013 </div>
+                <div>
+                    <ul class="social-networks">
+                        <li class="social-networks__item"><a href="#"><img src="img/social/ico-facebook.png" alt="facebook"></a></li>
+                        <li class="social-networks__item"><a href="#"><img src="img/social/ico-google.png" alt="google"></a></li>
+                        <li class="social-networks__item"><a href="#"><img src="img/social/ico-twitter.png" alt="twitter"></a></li>
+                        <li class="social-networks__item"><a href="#"><img src="img/social/ico-linkedin.png" alt="linkedin"></a></li>
+                    </ul>
+                </div>
+    
+            </section>
+                    </div>
+    </footer>
+
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+      </script>
+
+</body>
+</html>
