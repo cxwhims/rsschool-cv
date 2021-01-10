@@ -6,25 +6,31 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_menu.css">
     <link rel="stylesheet" href="slider.css">
 </head>
 <body>
-    <header class="header-block">
+    <header class="header-block" id="home">
         <div class="wrapper">
             <div class="header">
             
                 <div class="header__logo-container">
                     <h1 class="header__logo">singolo <p class="header__logoX">*</p></h1>
                 </div>
+
+                <div class="nav-toggle">
+                    <div class="nav-toggle-bar"></div>
+                    <div class="header__logo-burger">singolo<span class="asterisk">*</span></div>
+                </div>
                 
-                <nav class="navigation">
+                <nav class="navigation nav">
                     <ul class="header-navigation">
-                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">home</a></li>
-                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">services</a></li>
-                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">portfolio</a></li>
-                        <li class="header-navigation__item"><a class="header-navigation__link" href="#">about</a></li>
-                        <li class="header-navigation__item_last"><a class="header-navigation__link" href="#">contact</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link active" href="#" onClick=setActive(this)>home</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#serv" onClick=setActive(this)>services</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#port" onClick=setActive(this)>portfolio</a></li>
+                        <li class="header-navigation__item"><a class="header-navigation__link" href="#" onClick=setActive(this)>about</a></li>
+                        <li class="header-navigation__item_last"><a class="header-navigation__link" href="#cont" onClick=setActive(this)>contact</a></li>
                     </ul>
                 </nav>
     
@@ -34,24 +40,23 @@
     </header>
 
     <main>
-        <section class="slider__wrapper">
-            <div class="wrapper">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                      <img src="img/slider/Slider1.png">
+        <section class="slider">
+                    <div class="slider__wrapper">
+                      <div class="slider__item">
+                        <div><img src="img/slider/Slider1.png"></div>
+                      </div>
+                      <div class="slider__item">
+                        <div style="height: auto; background: #648BF0;"><img src="img/slider/Slider2.png"></div>
+                      </div>
+
                     </div>
-                  
-                    <div class="mySlides">
-                      <img src="img/slider/Slider2.png">
+                    <div class="slider__control-wrapper">
+                        <a class="slider__control slider__control_left" href="#" role="button" onclick="plusSlides(-1)"></a>
+                        <a class="slider__control slider__control_right" href="#" role="button" onclick="plusSlides(1)"></a>
                     </div>
-                  
-                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-                  </div>
-            </div>
         </section>
     
-        <section class="services">
+        <section class="services" id="serv">
             <div class="services-portfolio-wrapper">
                 <div class="services-head">
                     <h2>Our Services</h2>
@@ -123,67 +128,66 @@
         </section>
     
         
-        <div class="portfolio">
-            <section class="services-portfolio-wrapper">
+        <section class="portfolio" >
+            <div class="services-portfolio-wrapper">
                 <div class="portfolio-head">
-                    <h2>Portfolio</h2>
+                    <h2 id="port">Portfolio</h2>
                     <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 </div>
                 <div>
                     <ul class="portfolio-menu">
-                        <li class="portfolio-menu__item">All</li>
-                        <li class="portfolio-menu__item">Web Design</li>
-                        <li class="portfolio-menu__item">Graphic Design</li>
-                        <li class="portfolio-menu__item">Artwork</li>
+                        <li class="portfolio-menu__item item item_selected" onClick="shuffleImages()">All</li>
+                        <li class="portfolio-menu__item item item_bordered" onClick="shuffleImages()">Web Design</li>
+                        <li class="portfolio-menu__item item item_bordered" onClick="shuffleImages()">Graphic Design</li>
+                        <li class="portfolio-menu__item item item_bordered" onClick="shuffleImages()">Artwork</li>
                     </ul>
                 </div>
-                <div >
-                    <ul class="portfolio-table">
-                        <li class="portfolio-table__item">
+                <!-- <div > -->
+                    <div class="portfolio-table" id="portfolio-table">
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-1.jpg" alt="1">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-2.jpg" alt="2">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-3.jpg" alt="3">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-4.jpg" alt="4">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-5.jpg" alt="5">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-6.jpg" alt="6">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-7.jpg" alt="7">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-8.jpg" alt="8">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-9.jpg" alt="9">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-10.jpg" alt="10">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-11.jpg" alt="11">
-                        </li>
-                        <li class="portfolio-table__item">
+                        </div>
+                        <div class="portfolio-table__item">
                             <img src="img/portfolio/portfolio-12.jpg" alt="12">
-                        </li>
-
-                    </ul>
-                </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
             </section>
         </div>
         
     
     </main>
-    <footer class="footer">
+    <footer class="footer" id="cont">
         <div class="wrapper">
             <section class="footer-conteiner">
                 <div class="copyright">© Copyright 2013 </div>
@@ -199,28 +203,8 @@
             </section>
                     </div>
     </footer>
+    <script src="index.js"></script>
 
-    <script>
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex-1].style.display = "block";
-        }
-      </script>
 
 </body>
 </html>
