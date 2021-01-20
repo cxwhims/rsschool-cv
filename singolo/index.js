@@ -1,33 +1,48 @@
-console.log('hello');
+
 
 window.onload = function() {
     menuItemClickHandler();
 }
-/* Hesder leptom menu */
-const setActive = (element) => {
-  let items = document.querySelectorAll('.header-navigation__link');
-  items.forEach(item => {
-    item.classList.remove('active');
+/* Hesder laptop menu */
+let mainNavLinks = document.querySelectorAll(".header-navigation__link");
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY + 96;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
   });
-  element.classList.add("active");
-}
+});
+
 
 /* Hesder mobile menu */
 (function() {
-
-  var hamburger = {
+  let hamburger = {
     navToggle: document.querySelector('.nav-toggle'),
     nav: document.querySelector('nav'),
+    navLinks: document.querySelectorAll('.header-navigation__link'),
+    navBack: document.querySelector('.nav-menu_background'),
 
     doToggle: function(e) {
       this.navToggle.classList.toggle('expanded');
       this.nav.classList.toggle('expanded');
+      this.navBack.classList.toggle('expanded');
     }
   };
 
   hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
-  hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
-
+  hamburger.navBack.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  hamburger.navLinks.forEach(link => {
+    link.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  })
 }());
 
 
@@ -43,7 +58,7 @@ const menuItemClickHandler = () => {
     })
 }
 
-const removeSelectedItem = () => {
+let removeSelectedItem = () => {
     let items = document.querySelectorAll('.portfolio-menu .portfolio-menu__item');
     items.forEach(item => {
         item.classList.remove('item_selected');
@@ -51,14 +66,15 @@ const removeSelectedItem = () => {
     })
 }
 
-const selectClickedItem = (clickedItem) => {
+let selectClickedItem = (clickedItem) => {
     clickedItem.classList.add('item_selected');
     clickedItem.classList.remove('item_bordered');
 }
 
 function shuffleImages() {
-  var container = document.getElementById("portfolio-table");
-  var elementsArray = Array.prototype.slice.call(container.getElementsByClassName('portfolio-table__item'));
+//  let Array = [];
+  let container = document.getElementById("portfolio-table");
+  let elementsArray = Array.prototype.slice.call(container.getElementsByClassName('portfolio-table__item'));
   elementsArray.forEach(function(element){
     container.removeChild(element);
   })
@@ -69,9 +85,9 @@ function shuffleImages() {
 }
 
 function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
@@ -82,10 +98,10 @@ function shuffleArray(array) {
 /*  Slider  */
 
 'use strict';
-var multiItemSlider = (function () {
+const multiItemSlider = (function () {
 
   function _isElementVisible(element) {
-    var rect = element.getBoundingClientRect(),
+    let rect = element.getBoundingClientRect(),
       vWidth = window.innerWidth || doc.documentElement.clientWidth,
       vHeight = window.innerHeight || doc.documentElement.clientHeight,
       elemFromPoint = function (x, y) { return document.elementFromPoint(x, y) };
@@ -100,7 +116,7 @@ var multiItemSlider = (function () {
   }
 
   return function (selector, config) {
-    var
+    let
       _mainElement = document.querySelector(selector), // основной элемент блока
       _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
       _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
@@ -126,7 +142,7 @@ var multiItemSlider = (function () {
         pause: true // устанавливать ли паузу при поднесении курсора к слайдеру
       };
 
-    for (var key in config) {
+    for (let key in config) {
       if (key in _config) {
         _config[key] = config[key];
       }
@@ -137,9 +153,9 @@ var multiItemSlider = (function () {
       _items.push({ item: item, position: index, transform: 0 });
     });
 
-    var _setActive = function () {
-      var _index = 0;
-      var width = parseFloat(document.body.clientWidth);
+    const _setActive = function () {
+      let _index = 0;
+      let width = parseFloat(document.body.clientWidth);
       _states.forEach(function (item, index, arr) {
         _states[index].active = false;
         if (width >= _states[index].minWidth)
@@ -148,8 +164,8 @@ var multiItemSlider = (function () {
       _states[_index].active = true;
     }
 
-    var _getActive = function () {
-      var _index;
+    const _getActive = function () {
+      let _index;
       _states.forEach(function (item, index, arr) {
         if (_states[index].active) {
           _index = index;
@@ -158,9 +174,9 @@ var multiItemSlider = (function () {
       return _index;
     }
 
-    var position = {
+    const position = {
       getItemMin: function () {
-        var indexItem = 0;
+        let indexItem = 0;
         _items.forEach(function (item, index) {
           if (item.position < _items[indexItem].position) {
             indexItem = index;
@@ -169,7 +185,7 @@ var multiItemSlider = (function () {
         return indexItem;
       },
       getItemMax: function () {
-        var indexItem = 0;
+        let indexItem = 0;
         _items.forEach(function (item, index) {
           if (item.position > _items[indexItem].position) {
             indexItem = index;
@@ -185,8 +201,8 @@ var multiItemSlider = (function () {
       }
     }
 
-    var _transformItem = function (direction) {
-      var nextItem;
+    const _transformItem = function (direction) {
+      let nextItem;
       if (!_isElementVisible(_mainElement)) {
         return;
       }
@@ -213,7 +229,7 @@ var multiItemSlider = (function () {
       _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
     }
 
-    var _cycle = function (direction) {
+    const _cycle = function (direction) {
       if (!_config.isCycling) {
         return;
       }
@@ -223,10 +239,10 @@ var multiItemSlider = (function () {
     }
 
     // обработчик события click для кнопок "назад" и "вперед"
-    var _controlClick = function (e) {
+    const _controlClick = function (e) {
       if (e.target.classList.contains('slider__control')) {
         e.preventDefault();
-        var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+        let direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
         _transformItem(direction);
         clearInterval(_interval);
         _cycle(_config.direction);
@@ -234,7 +250,7 @@ var multiItemSlider = (function () {
     };
 
     // обработка события изменения видимости страницы
-    var _handleVisibilityChange = function () {
+    const _handleVisibilityChange = function () {
       if (document.visibilityState === "hidden") {
         clearInterval(_interval);
       } else {
@@ -243,7 +259,7 @@ var multiItemSlider = (function () {
       }
     }
 
-    var _refresh = function () {
+    const _refresh = function () {
       clearInterval(_interval);
       _mainElement.innerHTML = _html;
       _sliderWrapper = _mainElement.querySelector('.slider__wrapper');
@@ -262,7 +278,7 @@ var multiItemSlider = (function () {
       });
     }
 
-    var _setUpListeners = function () {
+    const _setUpListeners = function () {
       _mainElement.addEventListener('click', _controlClick);
       if (_config.pause && _config.isCycling) {
         _mainElement.addEventListener('mouseenter', function () {
@@ -275,7 +291,7 @@ var multiItemSlider = (function () {
       }
       document.addEventListener('visibilitychange', _handleVisibilityChange, false);
       window.addEventListener('resize', function () {
-        var
+        let
           _index = 0,
           width = parseFloat(document.body.clientWidth);
         _states.forEach(function (item, index, arr) {
@@ -317,6 +333,6 @@ var multiItemSlider = (function () {
   }
 }());
 
-var slider = multiItemSlider('.slider', {
+const slider = multiItemSlider('.slider', {
   isCycling: false
 })

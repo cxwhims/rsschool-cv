@@ -1,18 +1,4 @@
-$content-width: 1019px;
-$tablet-width: 767px;
-$mobile-width: 375px; 
-
-@mixin media-tablet {
-    @media (max-width: $content-width) { @content; }
-}
-
-@mixin media-mobile {
-    @media (max-width: $tablet-width) { @content; }
-}
-
-@mixin media-mobile-min {
-    @media (max-width: $mobile-width) { @content; }
-}    
+@import "constants";
 
 * {
     box-sizing: border-box;
@@ -234,41 +220,41 @@ h3 {
 }
 
 .icon-services_pencil {
-    background-image: url(/singolo/img/services/services-item-1--nocircle.svg);
+    background-image: url(img/services/services-item-1--nocircle.svg);
     width: 32px;
     height: 32px;
 }
 
 .icon-services_bulb {
-    background-image: url(/singolo/img/services/services-item-2--nocircle.svg);
+    background-image: url(img/services/services-item-2--nocircle.svg);
     width: 22px;
     height: 32px;
     display: inline-block;
 }
 
 .icon-services_heart {
-    background-image: url(/singolo/img/services/services-item-3--nocircle.svg);
+    background-image: url(img/services/services-item-3--nocircle.svg);
     width: 32px;
     height: 28px;
     display: inline-block;
 }
 
 .icon-services_mobile {
-    background-image: url(/singolo/img/services/services-item-4--nocircle.svg);
+    background-image: url(img/services/services-item-4--nocircle.svg);
     width: 22px;
     height: 32px;
     display: inline-block;
 }
 
 .icon-services_think {
-    background-image: url(/singolo/img/services/services-item-5--nocircle.svg);
+    background-image: url(img/services/services-item-5--nocircle.svg);
     width: 32px;
     height: 28px;
     display: inline-block;
 }
 
 .icon-services_star {
-    background-image: url(/singolo/img/services/services-item-6--nocircle.svg);
+    background-image: url(img/services/services-item-6--nocircle.svg);
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -356,11 +342,11 @@ h3 {
         }
 }
 
-.portfolio-table__item:nth-last-child(1n + 13){
+.portfolio-table__item:nth-child(n + 13){
     display: none;
 }
 @include media-mobile-min {
-    .portfolio-table__item:nth-last-child(1n + 9){
+    .portfolio-table__item:nth-child(1n + 9){
         display: none;
     }
     
@@ -381,7 +367,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include media-tablet {
+    @include media-mobile {
         justify-content: center;
         }
 

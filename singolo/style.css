@@ -276,41 +276,41 @@ h3 {
 }
 
 .icon-services_pencil {
-  background-image: url(/singolo/img/services/services-item-1--nocircle.svg);
+  background-image: url(img/services/services-item-1--nocircle.svg);
   width: 32px;
   height: 32px;
 }
 
 .icon-services_bulb {
-  background-image: url(/singolo/img/services/services-item-2--nocircle.svg);
+  background-image: url(img/services/services-item-2--nocircle.svg);
   width: 22px;
   height: 32px;
   display: inline-block;
 }
 
 .icon-services_heart {
-  background-image: url(/singolo/img/services/services-item-3--nocircle.svg);
+  background-image: url(img/services/services-item-3--nocircle.svg);
   width: 32px;
   height: 28px;
   display: inline-block;
 }
 
 .icon-services_mobile {
-  background-image: url(/singolo/img/services/services-item-4--nocircle.svg);
+  background-image: url(img/services/services-item-4--nocircle.svg);
   width: 22px;
   height: 32px;
   display: inline-block;
 }
 
 .icon-services_think {
-  background-image: url(/singolo/img/services/services-item-5--nocircle.svg);
+  background-image: url(img/services/services-item-5--nocircle.svg);
   width: 32px;
   height: 28px;
   display: inline-block;
 }
 
 .icon-services_star {
-  background-image: url(/singolo/img/services/services-item-6--nocircle.svg);
+  background-image: url(img/services/services-item-6--nocircle.svg);
   width: 32px;
   height: 32px;
   display: inline-block;
@@ -415,12 +415,12 @@ h3 {
   }
 }
 
-.portfolio-table__item:nth-last-child(1n + 13) {
+.portfolio-table__item:nth-child(n + 13) {
   display: none;
 }
 
 @media (max-width: 375px) {
-  .portfolio-table__item:nth-last-child(1n + 9) {
+  .portfolio-table__item:nth-child(1n + 9) {
     display: none;
   }
 }
@@ -448,7 +448,7 @@ h3 {
           align-items: center;
 }
 
-@media (max-width: 1019px) {
+@media (max-width: 767px) {
   .footer-conteiner {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

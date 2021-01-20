@@ -1,18 +1,4 @@
-$content-width: 1019px;
-$tablet-width: 767px;
-$mobile-width: 375px; 
-
-@mixin media-tablet {
-    @media (max-width: $content-width) { @content; }
-}
-
-@mixin media-mobile {
-    @media (max-width: $tablet-width) { @content; }
-}
-
-@mixin media-mobile-min {
-    @media (max-width: $mobile-width) { @content; }
-}   
+@import "constants";
 
 .slider {
   position: relative;

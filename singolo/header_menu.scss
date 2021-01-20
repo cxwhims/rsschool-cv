@@ -1,20 +1,21 @@
-$content-width: 1019px;
-$tablet-width: 767px;
-$mobile-width: 375px; 
-
-@mixin media-tablet {
-    @media (max-width: $content-width) { @content; }
-}
-
-@mixin media-mobile {
-    @media (max-width: $tablet-width) { @content; }
-}
-
-@mixin media-mobile-min {
-    @media (max-width: $mobile-width) { @content; }
-}  
+@import "constants";
 
 @include media-mobile {
+    .nav-menu_background {
+      display: none;
+    }
+    .nav-menu_background.expanded {
+      display: block;
+      background: #000;
+      opacity: .5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    
     .nav {
         -webkit-transition: left 0.5s ease;
         -moz-transition: left 0.5s ease;
@@ -45,7 +46,7 @@ $mobile-width: 375px;
         cursor: pointer;
         left: 1rem;
         position: fixed;
-        top: 2rem;
+        top: 1.5rem;
         width: 40px;
         height: 20px;
         z-index: 2;
@@ -64,7 +65,7 @@ $mobile-width: 375px;
         transition: all 0.5s ease;
         background: white;
         content: '';
-        height: 0.4rem;
+        height: 0.25rem;
         width: 100%;
       }
       
