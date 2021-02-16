@@ -1,0 +1,54 @@
+body {
+  background-color: #ffefbd;
+}
+#main {
+  margin: auto;
+  max-width: 1024px;
+}
+ol {
+  margin: 0 40px;
+  padding: 0;
+  list-style: none;
+  text-align: justify;
+}
+img {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: auto;
+  max-width: 220px;
+}
+.photo-name-info {
+  display: flex;
+}
+.my-photo {
+  font-size: small;
+  text-align: center;
+}
+#title {
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .photo-name-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body {
+    background-color: #142040;
+    color: rgb(255, 255, 255);
+  }
+  img {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 157px;
+    height: auto;
+  }
+  .list {
+    margin: auto 10px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  a {
+    color: #78bcc3;
+  }
+}
