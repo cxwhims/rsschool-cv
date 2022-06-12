@@ -17,6 +17,10 @@ img {
   height: auto;
   max-width: 220px;
 }
+address {
+  display: flex;
+  flex-direction: column;
+}
 .photo-name-info {
   display: flex;
 }
