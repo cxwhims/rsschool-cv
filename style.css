@@ -1,5 +1,9 @@
 body {
-  background-color: #ffefbd;
+  background-color: #ffffff;
+  margin: 0;
+}
+h1 {
+  margin: 0;
 }
 #main {
   margin: auto;
@@ -28,9 +32,18 @@ address {
   font-size: small;
   text-align: center;
 }
-#title {
+header {
+  background-color: #ffefbd;
+
   text-align: center;
 }
+footer {
+  background-color: #ffefbd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 @media screen and (max-width: 500px) {
   .photo-name-info {
     flex-wrap: wrap;
