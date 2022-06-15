@@ -1,6 +1,7 @@
 body {
   background-color: #ffffff;
   margin: 0;
+  position: relative;
 }
 h1 {
   margin: 0;
@@ -8,6 +9,7 @@ h1 {
 #main {
   margin: auto;
   max-width: 1024px;
+  padding-bottom: 90px;
 }
 ol {
   margin: 0 40px;
@@ -21,7 +23,7 @@ ol {
   height: auto;
   max-width: 220px;
 }
-address {
+.address {
   display: flex;
   flex-direction: column;
 }
@@ -50,6 +52,10 @@ header {
   margin-left: 18px;
   margin-right: 18px;
 }
+.logoRSS{
+  width: 50px;
+  height: 50px;
+}
 
 @media screen and (max-width: 500px) {
   .photo-name-info {
@@ -66,7 +72,7 @@ header {
     width: 157px;
     height: auto;
   }
-  .list {
+   .list {
     margin: auto 10px;
   }
   .contact-info {
