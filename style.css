@@ -1,0 +1,120 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  position: relative;
+}
+a {
+  color: black;
+}
+hr {
+  margin-bottom: 0px;
+}
+h1 {
+  margin: 0;
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: auto;
+}
+
+.main-menu ul li{
+  text-decoration: none;
+  padding: 5px;
+  background-color: #ffefbd;
+}
+
+.main-menu ul li a{
+  text-decoration: none;
+}
+
+.main-menu ul li a:hover{
+  text-decoration: underline;
+}
+
+.address ul {
+  padding-left: 20px;
+}
+
+.address ul li{
+  padding-top: 10px;
+}
+
+#main {
+  margin: auto;
+  max-width: 1024px;
+  padding-bottom: 90px;
+}
+ol {
+  margin: 0 40px;
+  padding: 0;
+  list-style: none;
+  text-align: justify;
+}
+#image {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: auto;
+  max-width: 220px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+}
+.photo-name-info {
+  display: flex;
+}
+.my-photo {
+  font-size: small;
+  text-align: center;
+}
+header {
+  background-color: #ffefbd;
+  text-align: center;
+}
+.footer {
+  background-color: #ffefbd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+}
+.year {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.logoRSS{
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .photo-name-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body {
+    background-color: #142040;
+    color: rgb(255, 255, 255);
+  }
+  #image {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 157px;
+    height: auto;
+  }
+   .list {
+    margin: auto 10px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  a {
+    color: #78bcc3;
+  }
+}
