@@ -6,63 +6,101 @@
     <title>Romankov Pavel, CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="main">
-        <header id="title">
-            <h2>UpSkill course student's CV</h2>
-           <hr>
-       </header>
-       <div class="photo-name-info">
-            <div id="img-div">
-                <figure class="my-photo">
-                    <img id="image" src="img/myPhoto.jpg" alt="myPhoto">
-                    <figcaption id="img-caption">my photo</figcaption>
-                </figure>
-            </div>
-            <div id="contact-div" class="contact-info">
-                <h2>Pavel Romankov </h2>
-                <h3>Contact Info:</h3> 
-                <address>
-                    <a href="skype:live:.cid.4ccdcf9040536ba1">My Skype</a>
-                    <a href="mailto:cxwhims@gmail.com">cxwhims@gmail.com</a>
-                    <a id="tribute-link" href="https://vk.com/cxwhims" target="_blank">Страница ВК</a>
-                </address>
-            </div>
-        </div>
-        
-        <ol class="list">
-            <!-- 3 -->
-            <li >
-                    <h3>Summary: </h3><p>I am a creative person. I love doing useful things with my own hands. I want to work in IT, because there is no limit to perfection in it.</p>
-            </li>
-            <!-- 4 -->
-            <li >
-                <h3>Skills:</h3><p>The basics of programming languages Pascal and C++</p>
-            </li>
-            <!-- 5 -->
-            <li >
-                <h3>Code examples:</h3><p>Unfortunately, there is no good example yet</p>
-            </li>
-            <!-- 6 -->
-            <li >
-                <h3>Experience:</h3><p>There is no development experience yet, but there is something to strive for</p>
-            </li>
-            <!-- 7 -->
-            <li >
-                <h3>Education:</h3>
+    <header>
+        <h1>UpSkill course student's CV - Pavel Romankov</h1>
+        <hr>
+    </header>
+    <main>
+        <div id="main">
+            <nav class="main-menu">
                 <ul>
-                    <li><p>Gomel State University named after F. Skaryna. Faculty of Mathematics (2005)</p></li>
-                    <li><p> Border Guard Institute (Minsk), officer retraining courses (2014)</p></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                    <li><a href="#Summary">Summary</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Code">Code</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#languages">Languages</a></li>
                 </ul>
-            </li>
-            <!-- 8 -->
-            <li >
-                <h3>English:</h3><p>English is under study</p>
-            </li>
-        </ol>    
-   
-    </div>
-    </body>
+            </nav>
+           <div class="photo-name-info">
+                <div id="img-div">
+                    <figure class="my-photo">
+                        <img id="image" src="img/myPhoto.jpg" alt="Photo - Pavel Romankov">
+                        <figcaption id="img-caption">Pavel Romankov</figcaption>
+                    </figure>
+                </div>
+                <div id="contact-div" class="contact-info">
+                    <h2 id="Contacts">Contact Info:</h2>
+                    <nav class="address">
+                        <ul>
+                            <li><a href="skype:live:.cid.4ccdcf9040536ba1">My Skype</a></li>
+                            <li><a href="mailto:cxwhims@gmail.com">cxwhims@gmail.com</a></li>
+                            <li><a id="tribute-link" href="https://www.facebook.com/cxwhims" target="_blank">Facebook</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <ol class="list">
+                <li>
+                    <h2 id="Summary">Summary: </h2><div>I am a creative person. I love doing useful things with my own hands. I want to work in IT, because there is no limit to perfection in it.</div>
+                </li>
+                <li>
+                    <h2 id="Skills">Skills:</h2>
+                    <div>
+                        <ul>
+                            <li>The basics of programming languages Pascal, C++</li>
+                            <li>HTML, CSS</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="Code">Code examples:</h2>
+                    <div>
+                        <pre>
+        <code>
+            .footer {
+                background-color: #ffefbd;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                align-items: center;
+            }
+        </code>
+                        </pre>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="Projects">A list of completed educational projects:</h2><div><a href="https://github.com/cxwhims/rsschool-cv/tree/singolo/singolo">project Singolo</a></div>
+                </li>
+                <li>
+                    <h2 id="Experience">Experience:</h2><div>There is no development experience yet, but there is something to strive for</div>
+                </li>
+                <li>
+                    <h2 id="Education">Education:</h2>
+                    <ul>
+                        <li>Gomel State University named after F. Skaryna. Faculty of Mathematics (2005)</li>
+                        <li>Border Guard Institute (Minsk), officer retraining courses (2014)</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 id="languages">English:</h2><div>English is under study. <br> German - A2</div>
+                </li>
+            </ol>
+        </div>
+    </main>
+    <footer  class="footer">
+        <div>
+            <a href="https://github.com/cxwhims">cxWhims</a><span class="year">2023</span>
+        </div>
+        <div>
+            <a href="https://rs.school/js/" target="_blank"><img class="logoRSS" src="./img/logo-rss.svg" alt="logo RSS"></a>
+        </div>
+    </footer>
+</body>
 </html>
-
